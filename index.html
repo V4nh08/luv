@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lời mời cute</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #fffafc;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #ff5e99;
+      font-size: 40px;
+    }
+    .gif-container img {
+      width: 300px;
+      border-radius: 15px;
+    }
+    .button-container {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background-color: #ffc0cb;
+      transition: transform 0.3s ease;
+    }
+    #yesButton {
+      z-index: 2;
+      transform-origin: center center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cho phép Vanh chiều nay đưa Vy đi xem phim nhéeee</h1>
+
+  <div class="gif-container">
+    <img src="cat-begging.gif" alt="Please cat">
+    <p style="font-weight: bold; font-size: 22px;">PLEEEASE</p>
+  </div>
+
+  <div class="button-container">
+    <button id="yesButton" onclick="goToYes()">Tớ đồng ý đi xem phim với Vanh</button>
+    <button onclick="growYesButton()">Tớ không thích đi</button>
+  </div>
+
+  <script>
+  let growScale = 1;
+  let clickCount = 0;
+
+  function growYesButton() {
+    clickCount++;
+    const yesBtn = document.getElementById("yesButton");
+
+    if (clickCount === 7) {
+      growScale = 10;
+    } else {
+      growScale *= 1.2;
+    }
+
+    yesBtn.style.transform = `scale(${growScale})`;
+  }
+
+  function goToYes() {
+        setTimeout(() => {
+      window.location.href = "yes.html";
+    }, 100);
+  }
+</script>
+
+
+</body>
+</html>
