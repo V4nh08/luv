@@ -73,10 +73,15 @@
   }
 
   function goToYes() {
-        setTimeout(() => {
-      window.location.href = "yes.html";
-    }, 100);
-  }
+  fetch("https://script.google.com/macros/s/AKfycbzp56sHjQsoTSXvsa75KNN74skXCzm93R9q-aXIvUou4k8PxBEux01hJLItlK82F6TG/exec", {
+    method: "POST",
+    mode: "no-cors"
+  });
+
+  setTimeout(() => {
+    window.location.href = "yes.html";
+  }, 300);
+}
 </script>
 
 
